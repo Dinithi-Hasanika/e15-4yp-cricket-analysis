@@ -20,8 +20,8 @@ Data Mining System for Selecting a Winning Cricket Team
 
 #### Supervisors
 
-- Asitha Bandaranayake, [asithab@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
-- Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
+-Dr. Asitha Bandaranayake, [asithab@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
+-Mr. Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
 
 #### Table of content
 
