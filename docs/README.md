@@ -3,7 +3,7 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: e15-4fy-cricket-analysis
+repository-name: e15-4yp-cricket-analysis
 title: Data Mining System for Selecting a Winning Cricket Team
 ---
 
