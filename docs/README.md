@@ -3,7 +3,7 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: e15-4yp-cricket-analysis
+repository-name: e15-4fy-cricket-analysis
 title: Data Mining System for Selecting a Winning Cricket Team
 ---
 
@@ -21,7 +21,7 @@ Data Mining System for Selecting a Winning Cricket Team
 #### Supervisors
 
 -Dr. Asitha Bandaranayake, [asithab@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
--Mr. Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
+- Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
 
 #### Table of content
 
