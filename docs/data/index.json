@@ -1,26 +1,26 @@
 {
-   "title":"This is the title of the project",
+   "title":"Data Mining System for Selecting a Winning Cricket Team",
    "team":[
       {
-         "name":"Team Member Name 1",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
+         "name":"Dinithi Hasanika",
+         "email":"e15119@eng.pdn.ac.lk",
+         "eNumber":"E/15/119",
          "github_profile":"#",
          "linkedin_profile":"#",
          "researchgate_profile":"#"
       },
       {
-         "name":"Team Member Name 2",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
+         "name":"Dulanjali Liyanage",
+         "email":"e15202@eng.pdn.ac.lk",
+         "eNumber":"E/15/202",
          "github_profile":"#",
          "linkedin_profile":"#",
          "researchgate_profile":"#"
       },
       {
-         "name":"Team Member Name 3",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
+         "name":"Roshani Dilhara",
+         "email":"e15208@eng.pdn.ac.lk",
+         "eNumber":"E/15/208",
          "github_profile":"#",
          "linkedin_profile":"#",
          "researchgate_profile":"#"
@@ -28,14 +28,14 @@
    ],
    "supervisors":[
       {
-         "name":"Dr. Supervisor 1",
-         "email":"email@eng.pdn.ac.lk",
+         "name":"Dr. Asitha Bandaranayake",
+         "email":"asithab@eng.pdn.ac.lk",
          "linkedin_profile":"",
          "researchgate_profile":""
       },
       {
-         "name":"Dr. Supervisor 2",
-         "email":"email@eng.pdn.ac.lk",
+         "name":"Mr. Sampath Deegalla",
+         "email":"sampath@eng.pdn.ac.lk",
          "linkedin_profile":"",
          "researchgate_profile":""
       }
