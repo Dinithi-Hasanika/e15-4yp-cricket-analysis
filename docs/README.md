@@ -3,24 +3,25 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-4yp-project-template
+repository-name: eYY-4yp-cricket-analysis
 title:
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
 # Project Title
+Data Mining System for Selecting a Winning Cricket Team
 
 #### Team
 
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
+- E/15/119, Dinithi Hasanika, [dinithiliyanage.95@gmail.com](mailto:name@email.com)
+- E/15/202, Dulanjali Liyanage, [preethi.du1995@gmail.com](mailto:name@email.com)
+- E/15/208, Roshani Dilhara, [roshanidilhara7@gmail.com](mailto:name@email.com)
 
 #### Supervisors
 
-- Name, [email](mailto:name@eng.pdn.ac.lk)
-- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Asitha Bandaranayake, [asithab@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
+- Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:name@eng.pdn.ac.lk)
 
 #### Table of content
 
