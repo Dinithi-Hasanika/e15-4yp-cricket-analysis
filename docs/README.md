@@ -376,6 +376,14 @@ Distribution of West Indies association rules
 3. Comparing Frequent Combinations Rules with Batsman Combined Av-erage
 Association rules that we have obtained for wining player combinations in teamswere compared with the previously obtained batsman combined averages. Thiswas compared for 2-grams, 3-grams etc. of player combinations.
 
+![India4confidenceAvg](India4confidenceAvg.png)
+Distribution of Confidence in India association rules against Batsman combined average
+
+![India4SupportAvg](India4SupportAvg.png)
+Distribution of Support in India association rules against Batsman combined average
+
+
+
 ## Conclusion
 Cricket is a sport with a huge fan base. So winning a cricket match has become a great honor for some countries. With this popularity, there are a number of bets on predicting the outcome of a cricket match. Therefore it has become a challenge to form a cricket team with best performance player ultimately which lead the cricket team to win. So in this study our aim was to model ODI playing batsmen and bowlers and score their performances accordingly. This study has presented priorities of each  features of players and their weights. We considered five new features which were not considered before. Namely player's height, the number of times they have won the man of the match, not out state when playing highest score and for bowlers number of hat-tricks they have taken and the BBI. Most of the other features considered in this study have used in previous researches. From this study we can conclude that man of the match, height, not out state when playing highest score, hat-tricks and BBI features has comparatively lesser weights in all of the different methods that we used to model batsmen and bowlers. From our results up to now different co-relations among different features have given higher weights on those features.
 As for the frequent player combinations, what we can conclude is that we cannot predict that having a certain player combination in a team will win the match.
