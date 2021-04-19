@@ -181,7 +181,7 @@ Following are some of the things that we had to face when preprocessing the raw 
 - Removed the matches that did not have a final result or tied matches.
 
 ##### Individual Player Performance
-Individual performance of players is considered separately as batsmen, bowlers, and fielders. Different features contribute in different priorities when comparing the players. Some features show different importance levels in different match types. In prior to rank the players, the features were weighted according to their priorities among each other. For that, we used AHP(Analytic Hierarchy Process).\par
+Individual performance of players is considered separately as batsmen, bowlers, and fielders. Different features contribute in different priorities when comparing the players. Some features show different importance levels in different match types. In prior to rank the players, the features were weighted according to their priorities among each other. For that, we used AHP(Analytic Hierarchy Process).
 
 Following are the steps we followed in calculating the weights for each feature after selecting the feature importance values from the model which gave highest accuracy.
 
@@ -202,13 +202,83 @@ For this analysis we used Association Rules. This depicted how frequent a player
 - Itemset :  All items occurring in a rule
 - Antecedent : Contains the different player combinations (number of players in a combination is always greater than 1). Generally we called it as the items found within the data.
 - Consequent :  In a particular rule this will always be the "won" (means the result of the considered match). Generally this means the output that happens if a particular itemset occurred.
-- Confidence : Number of correct rules with the considered player combination and won the match\\
+- Confidence : Number of correct rules with the considered player combination and won the match
 
 ##### Outcome Prediction
 For outcome prediction of a ODI match we build a outcome prediction model using machine learning classification models. This is a binary classification problem, since we are predicting won or loss result of the match. The draw matches and abandoned matches were excluded from the dataset. Both existing match features and derived features from the individual player performances considered for this outcome prediction. 70{\%} of data used as the training set and other 30{\%} used as the test set. The data set was balanced dataset.
 
 ## Experiment Setup and Implementation
+##### Research Tools
+To achieve our goal we have used machine learning libraries used in python.
 
+- scikit learn - A machine learning library for python which includes algortihms of different  classifiers, regressors etc.
+- Pandas - Used for data manipulation and analysis.Handling data structures and operations
+- Numpy - Supports for multidimensional arrays and matrices. Contains a large number of high-level mathematical functions
+- Matplotlib - A plotting library. Helpful in visualising relations between features.
+- Apriori - An algorithm for frequent itemset mining and association rule learning.
+
+Inorder to collabaratively work on the codes, we used Google Colab; an online tool with jupyter notebook environment.It was very helpful Since it contains all the required machine learning libraries for python.
+
+##### Data manipulation and Testing
+Our initial data sets were already in .csv which is a format that we can use in building up our models and tested. But, as mentioned before, we were not able to find all the required fields in one source. So we had to go through manual process to add the players height, and man of the match and number of hat-tricks of bowlers features to these data sets. Even after filling all the required fields there were some missing values. So first we had to go through data preprocessing process. 
+
+##### Regression and Feature Importance Selection Methods
+All the class attributes we considered for the batsmen and bowlers with different feature combinations were numeric type. Therefore we had to use regression to build up machine learning models. The regressors used in our study are random forest regression, Decision tree regression, XGBoost regression, k-neighbours regression and linear regression.
+
+###### Random Forest Regression
+Random forests use ensemble learning methods to build up the regression model and construct multitude of decision trees at training time. After fitting the model feature importances property can be used to take importance of input features.
+###### CART - Decision Tree Regression
+Decision tree regression builds regression model in the form of a tree structure. It breaks down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. After fitting the model feature importances property can be used to take importance of input features.
+###### XGBoost regression
+XGBoost is a library that provides an efficient and effective implementation of the stochastic gradient boosting algorithm. XGBRegressor is the class in the XGBoost that can be used for regression. After fitting data to the model there is a property in model called feature importances which can be use to find the importances of features used to build up the model.
+###### k-neighbours regression
+k-NN regression, the k-NN algorithm is used for estimating continuous variables and the permutation testing canbe used to get the feature importance of each input feature.
+###### Linear Regression
+Linear Regression is in sklearn.linear model and after fitting this regression model the coeff property includes the importance in each feature that is used to build the model.
+
+##### Features Considered
+###### Batsmen
+- Man of the match - Number of man of the match awards won by the player
+- Last 4 matches runs mean - Average of runs taken by player in his last 4 matches
+- Height(cm) - Height of the player
+- Batting Style - Whether batsman is right handed or not
+- Average - Batting average throughout his carrear
+- NO - number of notouts
+- HS - Highest score
+- HS_NO - Whether highest score played, and out or not
+- SR - Strike rate
+- 100s - number of 100s scored
+- 50s - number of 50s scored
+- 0s - number of times that batsmen out for 0
+- Mat - Number of matches
+- Inns - Number of innings
+###### Bowlers
+- Man of the match - Number of man of the match awards won by the player
+- 4 - number of times 4 wickets were taken
+- 5 - number of times 5 wickets were taken
+- Height(cm) - Height of the player
+- Bowling style
+- Econ - Economy of the bowler
+- Hattricks - number of times 3 wickets were taken on a row
+- SR - Strike rate
+- Average - Batting average throughout his carrear
+- BBI - Best bowling
+- Mat - Number of matches
+- Inns - Number of innings 
+###### Fielders
+
+ Considered features are, 
+- Man of the match - Number of man of the match awards won by the player
+- Dis - Number of dismissals taken by the player
+- Height(cm) - Height of the player
+- Ct - Number of catches
+- St - Number of stumps
+- Ct Wk - Number of catches as wicket-keeper
+- Ct Fi - Number of catches as fielder
+- MD - Maximum number of dismissals recorded by the player in a match
+- MDct - Maximum number of catches recorded by the player in a match
+- Inns - Number of innings
+- MDst - Maximum number of stumps recorded by the player in a match
 ## Results and Analysis
 
 ## Conclusion
