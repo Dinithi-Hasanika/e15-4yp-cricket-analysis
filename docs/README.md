@@ -141,6 +141,34 @@ P.A. Gregory et al. has used an iterative approach to obtain an optimum set of a
 
 As discussed above there are many types of research that have been carried out by data mining and machine learning approaches in team and player evaluations and predicting the outcome of the match. Although most of them have used the data mining and machine learning approaches the final model to predict the results have shown some differences due to the different attributes used or due to the difference in considered time period and type of match.
 ## Methodology
+###### Proposed Methodology
+The main objectives of this research are recognizing patterns of player combinations that result in the match outcome and predicting the match outcome when the players of two teams and match conditions are provided.
+
+This research is carried under five perspectives. 
+1. Identify features impact on the individual performance
+In this, the features affecting the individual performance of a player is considered. This research considered new features that were not used in earlier researches. This is carried under three divisions as batsmen, bowlers, and fielders. Using machine learning regression models the feature importance was obtained.\par
+2. Ranking players considering their individual performance
+The ranking of players is carried under three divisions as batsmen, bowlers, and fielders. Wicket-keepers also considered as fielders. All-rounders are considered under all three divisions. Considering the features impact on player's performance a score is calculated for each player. Based on the calculated score player is ranked.
+3. Identify the combined effect of players
+Not only the individual performance but also the combined effect of players also impacts the match outcome. This approach is a statistical approach to find beautiful combinations of players where their combined effect is better than the combination of their individual performances. This approach considers batsmen and bowlers separately. This considers n-grams of players like 2-grams, 3-grams.
+4. Identify frequent player combinations
+This is an association rule mining approach to find frequent combinations, frequent winning combinations in ODI matches. The combinations obtained by this approach is further compared with the beautiful combinations obtained by considering combined effect of players.
+5. Predict the match outcome
+This approach is to build a machine learning model which predicts the outcome of a given match. This model predicts the outcome of a given ODI cricket match under following conditions.
+
+- Two teams should be one of these countries:\\ England, Australia, New Zealand, Sri Lanka, Bangladesh, Pakistan, India, Zimbabwe, West Indies, Afghanistan  and Ireland
+- The team combination should be given.
+- Toss won team should be given.
+- Ground should be given.
+- Match time should be given as day or day-night match or night match.
+
+In this approach we used the results obtained from the above 1st and 2nd perspectives.
+
+##### Data Collection
+In the first phase of our project we used the career details of batsman and bowlers. And in this phase, second phase, we collected the fielders data, and all the runs scored by all players in each match. So do all these we obtained the data sets from kaggle and ESPN Cricinfo. Those sources included most of the data but there were some required details which were not included there. So we had to enter them manually. Since there were a lot of data it was a very tiring task to gather all those data.
+In the first phase, although we gathered data for match details form 2010 to 2020, here we shorten that time span to 2015 to 2020. All these data are gathered only for selected number of countries.
+
+Selected countries - ICC full member countries: England, Australia, New Zealand, Sri Lanka, Bangladesh, Pakistan, India, Zimbabwe, West Indies, Afghanistan, South Africa  and Ireland
 
 ## Experiment Setup and Implementation
 
