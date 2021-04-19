@@ -313,8 +313,10 @@ We considered several feature combinations and different class attributes to obt
 3.Fielders
 -Class Attribute : Dismissals per innings
 XGBoost had the best accuracy. Therefore XGBoostalgorithm was used in calculating feature importance for each of the features,relevent to all the other features. Eventually these values are used in prioritiz-ing and assigning weights on the features. Then this weights used to calculate the fielders scores.
+
 -Class Attribute : Winning dismissals per innings
 Again the highest accurate model was XGBoost. Weights and priorities for this model was then calculated and took the scores of the players.
+
 -Class Attribute : Dismissals(Dis)
 andom Forest Regressor model was used in calculating feature importance for each of the features relevant to all the other features.Then these values were used in prioritizing and assigning weights on thefeatures. Then these weights were used to calculate the fielders scores.
 
@@ -355,6 +357,20 @@ For the bowlers the combined results were taken considering three approaches.Her
 2. Frequent Combinations
 We analysed different winning player combinations occurred in 12 countries using association rules.
 -Without Player Position
+
+![India](India.png)
+Distribution of India association rules
+
+![Ireland](Ireland.png)
+Distribution of Ireland association rules
+
+![SA](SA.PNG)
+Distribution of South Africa association rules
+
+![WI](WI.PNG)
+Distribution of West Indies association rules
+
+
 -With Player Position
 
 3. Comparing Frequent Combinations Rules with Batsman Combined Av-erage
