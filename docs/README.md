@@ -307,6 +307,25 @@ We used several methods to obtain several values for same player considering two
 1.Batsmen
 We considered several feature combinations and different class attributes to obtain score for batsmen. But for the final outcome prediction model we used the scores set obtained using the career features and the class attribute : Overall Runs.
 
+![BAknnAll](BAknnAll.png)
+Feature Importance: All Features combination Batsmen and class attribute: Overall Runs
+
+![BAxgbAll](BAxgbAll.png)
+Feature Importance: All Features combination Batsmen and class attribute: Batting Average
+
+![xgboost_all_wave](xgboost_all_wave.png)
+Feature Importance: All Features combination Batsmen and class attribute: Winning Average
+
+![batknn](batknn.png)
+Feature Importance: Career Features combination Batsmen and class attribute: overall runs
+
+![batrfc](batrfc.png)
+Feature Importance: Career Features combination Batsmen and class attribute: batting average
+
+![xgboost_car_wave](xgboost_car_wave.png)
+Feature Importance: Career Features combination Batsmen and class attribute: Winning Average
+
+
 2.Bowlers
 We considered several feature combinations and different class attributes to obtain score for bowlers. But for the final outcome prediction model we used the scores set obtained using the all features and the class attribute : Overall Wickets.
 
