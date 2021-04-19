@@ -321,6 +321,18 @@ andom Forest Regressor model was used in calculating feature importance for each
 ![Fieldersd_i](Fieldersd_i.PNG)
 Feature Importance of Fielders and class attribute: Dismissals per Innings
 
+![FieldersWinDI](FieldersWinDI.PNG)
+Feature Importance of Fielders and class attribute: Winning dismissals per Innings
+
+![FieldersDIS](FieldersDIS.png)
+Feature Importance of Fielders and class attribute: Dismissals
+
+![Capture1](Capture1.PNG)
+Impact of all the features for the outcome prediction model build using all the features
+
+![Capture2](Capture2.PNG)
+Impact of the features for the final outcome prediction model
+
 
 From the above two fielder score sets we selected score set in Class Attribute : Dismissals(Dis) for the calculation of fielders score and opposite fielders score features for final outcome prediction model. This feature set was selected considering the accuracy of thefinal outcome prediction model.
 
