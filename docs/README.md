@@ -319,6 +319,8 @@ Again the highest accurate model was XGBoost. Weights and priorities for this mo
 andom Forest Regressor model was used in calculating feature importance for each of the features relevant to all the other features.Then these values were used in prioritizing and assigning weights on thefeatures. Then these weights were used to calculate the fielders scores.
 
 ![Fieldersd_i](Fieldersd_i.PNG)
+Feature Importance of Fielders and class attribute: Dismissals per Innings
+
 
 From the above two fielder score sets we selected score set in Class Attribute : Dismissals(Dis) for the calculation of fielders score and opposite fielders score features for final outcome prediction model. This feature set was selected considering the accuracy of thefinal outcome prediction model.
 
