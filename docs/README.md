@@ -298,7 +298,51 @@ Even there was sources to collect data, data organization in the required format
 One challenge was to come up with a method to find values for the new feature 'scores' of each player. So for that we followed some papers and their methods. In those methods, there was no way to find the feature importance comparison matrix. For that, we got the feature importance given by the highest accuracy model that we trained as an input and found the importance comparison matrix. When finding scores for bowlers, for some class values, we got nan values for priorities and weights for some models that we selected. So we had to change the model that we selected.
 For the statistical method of frequent player combination comparison, we tried to find combinations of players up to 11-grams. But we did not have enough CPU performance power to do that. Therefore we only considered 2,3,4 grams of players.
 When building the outcome prediction model, we considered the sum of scores that we calculated for the players considering their individual performance. Since we calculated several scores for each player, there were huge number of combinations of batsmen,bowler and fielder scores to consider. Therefore selection of good combination of bating, bowling, fielding scores as attributes for final model was a problem. We  selected few scores with different behaviors and selected the best combination considering the outcome prediction model accuracy.
+
 ## Results and Analysis
+
+##### Results
+We used several methods to obtain several values for same player considering two feature combinations and different class attributes. Feature importance of each method took from the feature importance for the best accuracy model of each method. Then got pairwise feature importance matrix for each followed method for batsmen and bowlers.
+##### Individual Performance
+1.Batsmen
+We considered several feature combinations and different class attributes to obtain score for batsmen. But for the final outcome prediction model we used the scores set obtained using the career features and the class attribute : Overall Runs.
+
+2.Bowlers
+We considered several feature combinations and different class attributes to obtain score for bowlers. But for the final outcome prediction model we used the scores set obtained using the all features and the class attribute : Overall Wickets.
+
+3.Fielders
+-Class Attribute : Dismissals per innings
+XGBoost had the best accuracy. Therefore XGBoostalgorithm was used in calculating feature importance for each of the features,relevent to all the other features. Eventually these values are used in prioritiz-ing and assigning weights on the features. Then this weights used to calculate the fielders scores.
+-Class Attribute : Winning dismissals per innings
+Again the highest accurate model was XGBoost. Weights and priorities for this model was then calculated and took the scores of the players.
+-Class Attribute : Dismissals(Dis)
+andom Forest Regressor model was used in calculating feature importance for each of the features relevant to all the other features.Then these values were used in prioritizing and assigning weights on thefeatures. Then these weights were used to calculate the fielders scores.
+
+From the above two fielder score sets we selected score set in Class Attribute : Dismissals(Dis) for the calculation of fielders score and opposite fielders score features for final outcome prediction model. This feature set was selected considering the accuracy of thefinal outcome prediction model.
+
+##### Team Performance
+1.Combined Average
+For the combined average, we considered both win and lose matches and only winmatches of all 12 ICC full member countries. This was found for batsmen andbowlers.
+
+-Batsmen
+Here, we are considering the average of runs.
+i. Win and lose Match results
+ii. Win match results
+
+-Bowlers
+For the bowlers the combined results were taken considering three approaches.Here, we considered the average runs conceded and wickets taken by thebowlers.
+ 1. Combinations of players that satisfy combined averages of runs given bythe considering n-gram of bowlers < Addition of their individual averages ofruns given by them
+ 2. Combinations of players that satisfy combined averages of wickets >Addition of their individual Wickets
+ 3. Combinations of players that satisfy both the 1 and 2 conditions above
+- Win and lose Match results for batsmen
+
+2. Frequent Combinations
+We analysed different winning player combinations occurred in 12 countries using association rules.
+-Without Player Position
+-With Player Position
+
+3. Comparing Frequent Combinations Rules with Batsman Combined Av-erage
+Association rules that we have obtained for wining player combinations in teamswere compared with the previously obtained batsman combined averages. Thiswas compared for 2-grams, 3-grams etc. of player combinations.
 
 ## Conclusion
 Cricket is a sport with a huge fan base. So winning a cricket match has become a great honor for some countries. With this popularity, there are a number of bets on predicting the outcome of a cricket match. Therefore it has become a challenge to form a cricket team with best performance player ultimately which lead the cricket team to win. So in this study our aim was to model ODI playing batsmen and bowlers and score their performances accordingly. This study has presented priorities of each  features of players and their weights. We considered five new features which were not considered before. Namely player's height, the number of times they have won the man of the match, not out state when playing highest score and for bowlers number of hat-tricks they have taken and the BBI. Most of the other features considered in this study have used in previous researches. From this study we can conclude that man of the match, height, not out state when playing highest score, hat-tricks and BBI features has comparatively lesser weights in all of the different methods that we used to model batsmen and bowlers. From our results up to now different co-relations among different features have given higher weights on those features.
