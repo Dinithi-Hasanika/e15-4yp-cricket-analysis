@@ -170,6 +170,43 @@ In the first phase, although we gathered data for match details form 2010 to 202
 
 Selected countries - ICC full member countries: England, Australia, New Zealand, Sri Lanka, Bangladesh, Pakistan, India, Zimbabwe, West Indies, Afghanistan, South Africa  and Ireland
 
+##### Data Preprocessing
+Gathered data sets have a very large amount of samples which makes it difficult to track the missing or any garbage values. Although we have collected number of features, some features are not really important. So in this stage our aim is to transform the raw data that we gathered from various sources into a useful format so that it is ready to use for analysing. 
+Following are some of the things that we had to face when preprocessing the raw dataset.
+
+- The height of some players was not stated in data sources. Therefore we treated them as missing values and replaced them with class mean of the attribute.
+- Similar situation happen with the man of the match feature of a player. So we had to replace those missing values with 0.
+- Missing data of batting style and bowling style were replaced using class mode of that attribute.
+- Bowlers and fielders first dataset had many missing career details. So we had to remove about a lot of players since we can not predict some required features.
+- Removed the matches that did not have a final result or tied matches.
+
+##### Individual Player Performance
+Individual performance of players is considered separately as batsmen, bowlers, and fielders. Different features contribute in different priorities when comparing the players. Some features show different importance levels in different match types. In prior to rank the players, the features were weighted according to their priorities among each other. For that, we used AHP(Analytic Hierarchy Process).\par
+
+Following are the steps we followed in calculating the weights for each feature after selecting the feature importance values from the model which gave highest accuracy.
+
+- Using the feature importance, we did a pairwise comparison between each feature importance with all other features' importance. There we created a matrix to compare each of the features.
+- Then, we found the priorities of each attributes when compared to the other attributes with the help of the matrix created. Following equation was used to find priorities.
+
+###### Score Prediction
+We needed to do a comparison between the players. So, we calculated a new feature 'score' for each player; a score for each batsman and a score for each bowler as batsman, bowler and fielder. All-rounders get three ranks because of this. This new feature was derived using the values of previously used features; using carrier features and all features corresponding to each player and the weights of each feature calculated.
+When ranking batsmen, bowlers and fielders we considered the score predicted by the above mentioned methods. We considered three features to obtain three different scores for same fielder. We followed same approach to score batsmen and bowlers. Then the best score can be choose by considering the other factors affect on the match and the team. The three features considered for fielders are number of dismissals, average dismissals per inning, average dismissals per inning of winning matches.The three features considered for batsmen are overall runs, average and winning average. The three class attributes considered for bowlers are overall wickets, average wickets and winning average wickets. Following equation was used for this considering importance of features.
+
+##### Combined Player Performance
+For combined player performance, we did a comparative analysis of it with the sum of individual player performances.
+Players in a team are considered in batsman and bowler categories. Their combined performances were taken considering different combinations like 2-grams, 3-grams and 4-grams for a specific feature in each category.Then we took the sum of individual performances from specific feature from each category which matches the combination type of combined performances. Using those two values, we did a comparative analysis.
+
+##### Frequent Player Combinations
+For this analysis we used Association Rules. This depicted how frequent a player combination has occurred together, in a team and led the team to victory. Association rules use the support and the confidence to interpret this situation.
+
+- Itemset :  All items occurring in a rule
+- Antecedent : Contains the different player combinations (number of players in a combination is always greater than 1). Generally we called it as the items found within the data.
+- Consequent :  In a particular rule this will always be the "won" (means the result of the considered match). Generally this means the output that happens if a particular itemset occurred.
+- Confidence : Number of correct rules with the considered player combination and won the match\\
+
+##### Outcome Prediction
+For outcome prediction of a ODI match we build a outcome prediction model using machine learning classification models. This is a binary classification problem, since we are predicting won or loss result of the match. The draw matches and abandoned matches were excluded from the dataset. Both existing match features and derived features from the individual player performances considered for this outcome prediction. 70{\%} of data used as the training set and other 30{\%} used as the test set. The data set was balanced dataset.
+
 ## Experiment Setup and Implementation
 
 ## Results and Analysis
