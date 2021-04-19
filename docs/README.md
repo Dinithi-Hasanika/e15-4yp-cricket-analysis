@@ -316,10 +316,10 @@ Feature Importance: All Features combination Batsmen and class attribute: Battin
 ![xgboost_all_wave](xgboost_all_wave.png)
 Feature Importance: All Features combination Batsmen and class attribute: Winning Average
 
-![batknn](batknn.png)
+![batknn](batknn.PNG)
 Feature Importance: Career Features combination Batsmen and class attribute: overall runs
 
-![batrfc](batrfc.png)
+![batrfc](batrfc.PNG)
 Feature Importance: Career Features combination Batsmen and class attribute: batting average
 
 ![xgboost_car_wave](xgboost_car_wave.png)
