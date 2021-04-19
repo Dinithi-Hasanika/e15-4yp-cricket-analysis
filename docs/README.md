@@ -329,6 +329,24 @@ Feature Importance: Career Features combination Batsmen and class attribute: Win
 2.Bowlers
 We considered several feature combinations and different class attributes to obtain score for bowlers. But for the final outcome prediction model we used the scores set obtained using the all features and the class attribute : Overall Wickets.
 
+![bowlknn](bowlknn.PNG)
+Feature Importance: All Features combination Bowlers and class attribute: Wickets
+
+![lr_all_ave](lr_all_ave.png)
+Feature Importance: All Features combination Bowlers and class attribute: Bowling Average
+
+![BOrfAll](BOrfAll.png)
+Feature Importance: All Features combination Bowlers and class attribute: Economy
+
+![bowlrfc](bowlrfc.PNG)
+Feature Importance: Carrier Features combination Bowlers and class attribute: Wickets
+
+![lr_car_ave](lr_car_ave.png)
+Feature Importance: Carrier Features combination Bowlers and class attribute: Bowling Average
+
+![BOrfCareer](BOrfCareer.png)
+Feature Importance: Career Features combination Bowlers and class attribute: Economy
+
 3.Fielders
 -Class Attribute : Dismissals per innings
 XGBoost had the best accuracy. Therefore XGBoostalgorithm was used in calculating feature importance for each of the features,relevent to all the other features. Eventually these values are used in prioritiz-ing and assigning weights on the features. Then this weights used to calculate the fielders scores.
