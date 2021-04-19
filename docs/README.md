@@ -156,7 +156,7 @@ This is an association rule mining approach to find frequent combinations, frequ
 5. Predict the match outcome
 This approach is to build a machine learning model which predicts the outcome of a given match. This model predicts the outcome of a given ODI cricket match under following conditions.
 
-- Two teams should be one of these countries:\\ England, Australia, New Zealand, Sri Lanka, Bangladesh, Pakistan, India, Zimbabwe, West Indies, Afghanistan  and Ireland
+- Two teams should be one of these countries: England, Australia, New Zealand, Sri Lanka, Bangladesh, Pakistan, India, Zimbabwe, West Indies, Afghanistan  and Ireland
 - The team combination should be given.
 - Toss won team should be given.
 - Ground should be given.
@@ -205,7 +205,7 @@ For this analysis we used Association Rules. This depicted how frequent a player
 - Confidence : Number of correct rules with the considered player combination and won the match
 
 ##### Outcome Prediction
-For outcome prediction of a ODI match we build a outcome prediction model using machine learning classification models. This is a binary classification problem, since we are predicting won or loss result of the match. The draw matches and abandoned matches were excluded from the dataset. Both existing match features and derived features from the individual player performances considered for this outcome prediction. 70{\%} of data used as the training set and other 30{\%} used as the test set. The data set was balanced dataset.
+For outcome prediction of a ODI match we build a outcome prediction model using machine learning classification models. This is a binary classification problem, since we are predicting won or loss result of the match. The draw matches and abandoned matches were excluded from the dataset. Both existing match features and derived features from the individual player performances considered for this outcome prediction. 70% of data used as the training set and other 30% used as the test set. The data set was balanced dataset.
 
 ## Experiment Setup and Implementation
 ##### Research Tools
@@ -265,9 +265,7 @@ Linear Regression is in sklearn.linear model and after fitting this regression m
 - BBI - Best bowling
 - Mat - Number of matches
 - Inns - Number of innings 
-###### Fielders
-
- Considered features are, 
+###### Fielders 
 - Man of the match - Number of man of the match awards won by the player
 - Dis - Number of dismissals taken by the player
 - Height(cm) - Height of the player
@@ -279,6 +277,27 @@ Linear Regression is in sklearn.linear model and after fitting this regression m
 - MDct - Maximum number of catches recorded by the player in a match
 - Inns - Number of innings
 - MDst - Maximum number of stumps recorded by the player in a match
+###### Outcome Prediction
+- Team - Name of the country from the considered 12 ICC full member countries
+- Day-Night - Whether match is a day match or day and night match or night match
+- Home - Whether match is playing in the country which team belongs to or not
+- Ground - Name of the ground where match is playing
+- Toss - Toss result, whether toss won or loss
+- Bat - Whether bat first or second
+- Opposition - Opposition team name
+- Batsmen Score - Sum of individual batsmen score of players of the team. This individual batsmen score is refers to the batsmen score obtained in this research's individual performance section.
+- Bowlers Score - Sum of individual bowlers score of players of the team. This individual bowlers score is refers to the bowlers score obtained in this research's individual performance section.
+- Fielders Score - Sum of individual fielders score of players of the team. This individual fielders score is refers to the fielders score obtained in this research's individual performance section.
+- Opposite Batsmen Score - Sum of individual batsmen score of players of the opposition team. This individual batsmen score is refers to the batsmen score obtained in this research's individual performance section.
+- Opposite Bowlers Score - Sum of individual bowlers score of players of the opposition team. This individual bowlers score is refers to the bowlers score obtained in this research's individual performance section.
+- Opposite Fielders Score - Sum of individual fielders score of players of the opposition team. This individual fielders score is refers to the fielders score obtained in this research's individual performance section.
+
+##### Pitfalls and workarounds 
+There were several pitfalls that we had to face during the project. The first thing was that we had to gather some background knowledge about cricket since we were not much familiar with the game and not experienced with it. Also we had to find out how different features affect a player or a team, what is measured or depicted by each feature and what features affect each cricket game type. For example, in bowling, strike rate would become an important feature for limited over matches since scoring as much as possible is very important in those matches. 
+Even there was sources to collect data, data organization in the required format, new features creation according to the needs of the our method was the biggest challenge.
+One challenge was to come up with a method to find values for the new feature 'scores' of each player. So for that we followed some papers and their methods. In those methods, there was no way to find the feature importance comparison matrix. For that, we got the feature importance given by the highest accuracy model that we trained as an input and found the importance comparison matrix. When finding scores for bowlers, for some class values, we got nan values for priorities and weights for some models that we selected. So we had to change the model that we selected.
+For the statistical method of frequent player combination comparison, we tried to find combinations of players up to 11-grams. But we did not have enough CPU performance power to do that. Therefore we only considered 2,3,4 grams of players.
+When building the outcome prediction model, we considered the sum of scores that we calculated for the players considering their individual performance. Since we calculated several scores for each player, there were huge number of combinations of batsmen,bowler and fielder scores to consider. Therefore selection of good combination of bating, bowling, fielding scores as attributes for final model was a problem. We  selected few scores with different behaviors and selected the best combination considering the outcome prediction model accuracy.
 ## Results and Analysis
 
 ## Conclusion
